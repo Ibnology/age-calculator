@@ -2,7 +2,7 @@ from datetime import datetime
 import time
 import sys
 import os
-clear = lambda: os.system('cls') if os.name == 'nt' else os.system('clear')
+clear = lambda: os.system('cls') if os.name == 'nt' else os.system('clear') # thx b0mb
 
 clear
 print("")
@@ -14,6 +14,7 @@ print("")
 print("-" *30 )
 print("")
 print("")
+
 
 my_date = input("Dogum tarihinizi giriniz (gg/aa/yyyy): ")
 print("")
