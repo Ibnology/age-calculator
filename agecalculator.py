@@ -2,8 +2,10 @@ from datetime import datetime
 import time
 import sys
 import os
+clear = lambda: os.system('cls') if os.name == 'nt' else os.system('clear')
 
-os.system('cls')
+
+clear
 print("")
 print("")
 print("-" *30 )
@@ -17,7 +19,7 @@ print("")
 my_date = input("Dogum tarihinizi giriniz (gg/aa/yyyy): ")
 print("")
 b_date = datetime.strptime(my_date, '%d/%m/%Y')
-os.system('cls')
+clear
 print("Dogum tarihiniz: ", my_date)
 print("Yasiniz : %d" % ((datetime.today() - b_date).days/365))
 
@@ -27,11 +29,11 @@ while True:
     sor = input("Programdan cikmak icin 'q' tusuna basin, tekrar hesaplamak icin 'r' tusuna basin: ")
 
     if sor == "r":
-      os.system('cls')  
+      clear  
       my_date = input("Dogum tarihinizi giriniz (gg/aa/yyyy): ")
       print("")
       b_date = datetime.strptime(my_date, '%d/%m/%Y')
-      os.system('cls')
+      clear
       print("Dogum tarihiniz: ", my_date)
       print("Yasiniz: %d" % ((datetime.today() - b_date).days/365))
       print("")
